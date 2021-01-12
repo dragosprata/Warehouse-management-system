@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="348.0" prefWidth="685.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.ProductController">
+   <children>
+      <TextField fx:id="prodIdText" layoutX="193.0" layoutY="41.0" prefHeight="25.0" prefWidth="67.0" promptText="Prod ID" />
+      <Label layoutX="194.0" layoutY="21.0" text="Product ID" />
+      <Button fx:id="searchProdBtn" layoutX="194.0" layoutY="70.0" mnemonicParsing="false" onAction="#searchProduct" prefHeight="25.0" prefWidth="56.0" text="Search" />
+      <Button fx:id="deleteProdBtn" layoutX="489.0" layoutY="70.0" mnemonicParsing="false" onAction="#deleteProduct" prefHeight="25.0" prefWidth="56.0" text="Delete" />
+      <Button fx:id="updateProdBtn" layoutX="263.0" layoutY="70.0" mnemonicParsing="false" onAction="#updateProductPrice" prefHeight="25.0" prefWidth="90.0" text="Update Price" />
+      <Button fx:id="addProdBtn" layoutX="95.0" layoutY="122.0" mnemonicParsing="false" onAction="#insertProduct" text="Add Product" />
+      <TextArea fx:id="resultArea" layoutX="7.0" layoutY="250.0" prefHeight="85.0" prefWidth="167.0" wrapText="true" />
+      <Label layoutX="9.0" layoutY="231.0" text="Result Console">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="newPriceText" layoutX="269.0" layoutY="41.0" prefHeight="25.0" prefWidth="67.0" promptText="new price" />
+      <Label layoutX="270.0" layoutY="21.0" text="New Price" />
+      <VBox layoutX="97.0" layoutY="24.0" prefHeight="85.0" prefWidth="79.0" spacing="4.0">
+         <children>
+            <TextField fx:id="denumireText" prefHeight="25.0" prefWidth="79.0" promptText="Denumire" />
+            <TextField fx:id="producatorText" prefHeight="25.0" prefWidth="79.0" promptText="Producator" />
+            <TextField fx:id="pretText" promptText="Pret" />
+         </children>
+      </VBox>
+      <VBox layoutX="9.0" layoutY="28.0" prefHeight="85.0" prefWidth="67.0" spacing="12.0">
+         <children>
+            <Label text="Denumire" />
+            <Label text="Producator" />
+            <Label text="Pret" />
+         </children>
+      </VBox>
+      <Separator layoutY="14.0" prefHeight="4.0" prefWidth="600.0" />
+      <Separator layoutX="180.0" layoutY="14.0" orientation="VERTICAL" prefHeight="333.0" prefWidth="7.0" />
+      <TableView fx:id="productTable" editable="true" layoutX="193.0" layoutY="102.0" prefHeight="234.0" prefWidth="486.0" tableMenuButtonVisible="true">
+        <columns>
+            <TableColumn fx:id="prodIdColumn" prefWidth="68.0" text="Id_produs" />
+          <TableColumn fx:id="prodDenumireColumn" text="Denumire" />
+          <TableColumn fx:id="prodProducatorColumn" text="Producator" />
+            <TableColumn fx:id="prodPretColumn" prefWidth="56.0" text="Pret" />
+            <TableColumn fx:id="prodCantitateColumn" prefWidth="75.0" text="Cantitate" />
+        </columns>
+      </TableView>
+      <Button fx:id="searchProdsBtn" layoutX="560.0" layoutY="70.0" mnemonicParsing="false" onAction="#searchProducts" prefHeight="25.0" prefWidth="120.0" text="Search All Products" />
+      <TextField fx:id="newCantitateText" layoutX="368.0" layoutY="41.0" prefHeight="25.0" prefWidth="90.0" promptText="new cantitate" />
+      <Label layoutX="377.0" layoutY="20.0" text="New Cantitate" />
+      <Button fx:id="updateProdBtn1" layoutX="364.0" layoutY="70.0" mnemonicParsing="false" onAction="#updateProductCantitate" prefHeight="25.0" prefWidth="107.0" text="Update Cantitate" />
+   </children>
+</AnchorPane>
